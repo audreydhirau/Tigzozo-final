@@ -1,0 +1,909 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/josefin-sans/JosefinSans-Bold.ttf");
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.black {
+  background: black;
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  overflow-x: hidden;
+}
+
+.mobile-nav {
+  height: 50px;
+  background: #80228c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.mobile-nav .logo {
+  height: 40px;
+}
+
+.mobile-nav .hamburger {
+  margin-right: 12px;
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-nav .hamburger .line {
+  width: 70%;
+  height: 2px;
+  background-color: white;
+}
+
+.pc-nav {
+  display: none;
+}
+
+.active .pc-nav {
+  display: block !important;
+}
+
+.active .pc-nav #light {
+  background-color: white;
+}
+
+.banner {
+  font-family: "JosefinSans";
+}
+
+.banner .container .row .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3rem;
+}
+
+.banner .container .row .left .text-2 {
+  width: 80%;
+}
+
+.banner .container .row .left .text-2 h2 {
+  font-weight: 900;
+}
+
+.banner .container .row .left .late {
+  height: 25px;
+  width: 25px;
+}
+
+.banner .container .row .left .s {
+  margin-left: 35px;
+}
+
+.banner .container .row .left .latest {
+  color: #80228c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.banner .container .row .left .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.banner .container .row .left .btns .btn-1 {
+  background: #80228c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+
+.banner .container .row .left .btns .btn-2 {
+  background: transparent;
+  color: #80228c;
+  border: 2px solid #80228c;
+  padding: 10px 20px;
+}
+
+.banner .container .row .right .photos {
+  gap: 5px;
+}
+
+.banner .container .row .right .photos img {
+  height: 12rem;
+  width: 5rem;
+}
+
+.banner .container .row .right .photos .img-1 {
+  margin-bottom: 7%;
+}
+
+.about {
+  font-family: "JosefinSans";
+  padding-top: 3rem;
+}
+
+.about .container .row .left .text-1 {
+  width: 20rem;
+}
+
+.about .container .row .left .imgs .tig {
+  height: 20rem;
+  width: 20rem;
+}
+
+.about .container .row .left .imgs img {
+  display: none;
+}
+
+.about .container .row .right .text {
+  margin-top: 1rem;
+  width: 20rem;
+}
+
+.about .container .row .right img {
+  height: 1rem;
+  width: 20rem;
+}
+
+.about .container .row .right button {
+  margin-top: 1rem;
+  background: #80228c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
+
+.pics .pic {
+  height: 60vh !important;
+}
+
+.three {
+  width: 26rem;
+}
+
+.services {
+  margin-top: 7%;
+  font-family: "JosefinSans";
+}
+
+.services .flexcontainer .row h3 {
+  font-weight: 900;
+}
+
+.services .flexcontainer .row .cards {
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.services .flexcontainer .row .cards .frst {
+  height: 60vh;
+  width: 100%;
+  padding-right: 20px;
+}
+
+.services .flexcontainer .row .cards .sec {
+  height: 60vh;
+  width: 100%;
+  padding-right: 20px;
+}
+
+.services .flexcontainer .row .cards .thrd {
+  display: none;
+  height: 60vh;
+  width: 100%;
+}
+
+.services .flexcontainer .row .cards .forth {
+  height: 60vh;
+  width: 95%;
+}
+
+.clients {
+  font-family: "JosefinSans";
+  padding-top: 3rem;
+}
+
+.clients .container .row .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.clients .container .row .left img {
+  height: 20rem;
+  width: 23rem;
+}
+
+.clients .container .row .left .texts {
+  width: 22rem;
+}
+
+.clients .container .row .left .text {
+  width: 15rem;
+}
+
+.clients .container .row .left .text .one {
+  padding-top: 30px;
+  padding-left: 90px;
+}
+
+.clients .container .row .left .text .two {
+  padding-top: 15px;
+  padding-left: 90px;
+}
+
+.clients .container .row .left .text .three {
+  padding-top: 10px;
+  padding-left: 95px;
+}
+
+.clients .container .row .right .bride {
+  height: 50vh;
+  width: 30rem;
+  padding-top: 20px;
+  margin-left: -20px;
+}
+
+.clients .container .row .right .text {
+  width: 15rem;
+}
+
+.clients .container .row .right .text .one {
+  padding-top: 10px;
+}
+
+.clients .container .row .right .text .two {
+  padding-top: 10px;
+}
+
+.clients .container .row .right .text .three {
+  padding-top: 10px;
+}
+
+.gallery {
+  font-family: "JosefinSans";
+}
+
+.gallery .container .vashiko {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.gallery .container .img {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.gallery .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5px;
+}
+
+.gallery .container .row h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery .container .row h2 span {
+  font-style: italic;
+}
+
+.gallery .container .row img {
+  display: none;
+  height: 20rem;
+  width: 90%;
+}
+
+.gallery .container .row .photo {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery .container .row h4 {
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery .container .row .btns-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery .container .row .btns-1 .btn-3 {
+  background: #80228c;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+}
+
+.footer {
+  font-family: "JosefinSans";
+  background: #80228c;
+  color: #fff;
+  margin-top: 3rem;
+  padding: 0 3rem;
+}
+
+.footer .row .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .row .left .foot {
+  width: 180px;
+}
+
+.footer .row .left .foot .log {
+  height: 30px;
+}
+
+.footer .row .left .foot .textt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .row .left .foot .textt .log {
+  height: 30px;
+}
+
+.footer .row .left .foot .textt .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  height: 10px;
+}
+
+.footer .row .left .foot .center {
+  margin-left: 18px;
+  width: 220px;
+}
+
+.footer .row .left .foot .center .t {
+  text-decoration: underline;
+}
+
+.footer .row .left .foot .center .textt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.footer .row .left .foot .center .textt a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer .row .foot-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .row .foot-two .center1 {
+  width: 120px;
+}
+
+.footer .row .foot-two .center1 .t {
+  text-decoration: underline;
+}
+
+.footer .row .foot-two .center1 .textt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.footer .row .foot-two .center1 .textt a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer .row .foot-two .right {
+  margin-left: 5rem;
+  width: 250px;
+}
+
+.footer .row .foot-two .right .t {
+  text-decoration: underline;
+}
+
+.footer .row .foot-two .right .icons2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  size: 2px;
+}
+
+.pc-footer {
+  display: none;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .footer {
+    display: none;
+  }
+  .pc-footer {
+    display: block;
+    background-color: purple;
+    color: white;
+    margin-top: 2rem;
+    padding: 50px;
+  }
+  .pc-footer .row .t {
+    text-decoration: underline;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .footer .row {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .pc-nav {
+    font-family: "JosefinSans";
+    display: block;
+  }
+  .pc-nav .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .pc-nav .flex-container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+    font-weight: 600;
+  }
+  .pc-nav .flex-container ul li {
+    color: var(--secondary-color);
+    font-size: 20px;
+  }
+  .pc-nav .flex-container ul li span {
+    color: #80228c;
+  }
+  .pc-nav .flex-container ul .dark-icon {
+    height: 30px;
+    width: 30px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+  }
+  .pc-nav .flex-container .img-2 {
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+  }
+  .banner .container .row .right .photos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
+  .banner .container .row .right .photos img {
+    height: 25rem;
+    width: 12rem;
+  }
+  .banner .container .row .right .photos .img-1 {
+    margin-top: 8%;
+  }
+  .banner .container .row .left h2 {
+    font-weight: 900;
+  }
+  .banner .container .row .left .btn-2 {
+    background: transparent;
+    border: 2px solid #80228c;
+    padding: 10px 20px;
+  }
+  .about {
+    padding-top: 3rem;
+  }
+  .about .container .row .left .text-1 {
+    width: 28rem;
+    margin-left: 100px;
+  }
+  .about .container .row .left .imgs {
+    margin-left: 95px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about .container .row .left .imgs img {
+    display: block !important;
+    height: 17rem;
+    width: 15rem;
+  }
+  .about .container .row .left .imgs .tig {
+    width: 15rem;
+  }
+  .about .container .row .left .imgs .image {
+    margin-top: 30%;
+    height: 19rem;
+  }
+  .about .container .row .right .text {
+    margin-left: 20px;
+    margin-top: 2rem;
+    width: 25rem;
+  }
+  .about .container .row .right img {
+    margin-left: 20px;
+    height: 1rem;
+    width: 20rem;
+  }
+  .about .container .row .right button {
+    margin-left: 20px;
+    margin-top: 0rem;
+    background: #80228c;
+    color: white;
+    padding: 6px 20px;
+    border: none;
+  }
+  .pics .pic {
+    height: 60vh !important;
+  }
+  .three {
+    width: 26rem;
+  }
+  .services {
+    padding-top: 2rem;
+  }
+  .services .flexcontainer .row {
+    padding-left: 13rem;
+  }
+  .services .flexcontainer .row h3 {
+    margin-left: -120px;
+  }
+  .services .flexcontainer .row .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -3rem;
+  }
+  .services .flexcontainer .row .cards .frst {
+    height: 60vh;
+    width: 40%;
+  }
+  .services .flexcontainer .row .cards .sec {
+    height: 60vh;
+    width: 40%;
+  }
+  .services .flexcontainer .row .cards .thrd {
+    display: block;
+    height: 60vh;
+    width: 30%;
+  }
+  .services .flexcontainer .row .cards .forth {
+    display: none;
+  }
+  .clients {
+    padding-top: 5rem;
+  }
+  .clients .container .row .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .clients .container .row .left h3 {
+    margin-right: 6rem;
+    width: 35rem;
+  }
+  .clients .container .row .left .texts {
+    width: 26rem;
+  }
+  .clients .container .row .left img {
+    height: 50vh;
+    width: 26rem;
+  }
+  .clients .container .row .left .text {
+    width: 15rem;
+  }
+  .clients .container .row .left .text .one {
+    padding-top: 30px;
+    padding-left: 90px;
+  }
+  .clients .container .row .left .text .two {
+    padding-top: 15px;
+    padding-left: 90px;
+  }
+  .clients .container .row .left .text .three {
+    padding-top: 10px;
+    padding-left: 95px;
+  }
+  .clients .container .row .right img {
+    height: 50vh;
+    width: 30rem;
+    padding-top: 20px;
+    margin-left: -20px;
+  }
+  .clients .container .row .right .text {
+    width: 15rem;
+  }
+  .clients .container .row .right .text .one {
+    padding-top: 10px;
+  }
+  .clients .container .row .right .text .two {
+    padding-top: 10px;
+  }
+  .clients .container .row .right .text .three {
+    padding-top: 10px;
+  }
+  .gallery {
+    font-family: "JosefinSans";
+  }
+  .gallery .container .row {
+    gap: 0;
+  }
+  .gallery .container .row img {
+    display: block;
+    height: 20rem;
+    width: 8rem;
+  }
+  .gallery .container .row .photo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 20rem;
+    width: 8rem;
+    margin-top: 25%;
+  }
+  .gallery .container .row h4 {
+    padding-top: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .gallery .container .row .btns-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .gallery .container .row .btns-1 .btn-3 {
+    background: #80228c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+  }
+  .footer {
+    background: #80228c;
+    color: #fff;
+    padding: 50px;
+  }
+  .footer .t {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+  .footer .row .left .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem;
+  }
+  .footer .row .center .textt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .footer .row .center .textt a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .footer .row .right .icons2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
+    size: 2px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+/* Set width to make card deck cards 100% width */
+/*# sourceMappingURL=style.css.map */
